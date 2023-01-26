@@ -43,7 +43,7 @@ jobs:
       working-directory: build_openssl
       run: perl ..\openssl\Configure VC-WIN64A
 
-    - name: Build Debug
+    - name: Build
       working-directory: build_openssl
       run: |
         nmake clear
