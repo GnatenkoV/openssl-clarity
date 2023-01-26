@@ -26,9 +26,9 @@ jobs:
         arch: win64
         
     - name: Add NASM to PATH
-    uses: ilammy/setup-nasm@v1
-      with:
-        platform: win64
+      uses: ilammy/setup-nasm@v1
+        with:
+          platform: win64
           
     - name: Add perl
       uses: shogo82148/actions-setup-perl@v1
