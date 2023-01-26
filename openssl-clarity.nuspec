@@ -8,7 +8,6 @@
         <owners>GnatenkoV</owners>
         <license type="expression">Apache-2.0</license>
         <projectUrl>https://github.com/gnatenkov/openssl-clarity</projectUrl>
-        <icon>logo.png</icon>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <summary>OpenSSL. Compiler: VS 2019</summary>
         <description>OpenSSL library, packaged for Visual Studio 2019 (vc142). Compiler: Visual Studio 2019</description>
