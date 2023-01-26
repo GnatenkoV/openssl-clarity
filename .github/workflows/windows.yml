@@ -42,7 +42,7 @@ jobs:
     - name: Configure build_openssl
       working-directory: build_openssl
       run: |
-        perl ..\openssl\Configure --banner=Configured no-makedepend no-shared no-fips VC-WIN64A
+        perl ..\openssl\Configure --banner=Configured no-makedepend no-shared enable-fips enable-quic VC-WIN64A
         perl configdata.pm --dump
 
     - name: Build Debug
