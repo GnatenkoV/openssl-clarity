@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="2.5">
+        <id>openssl</id>
+        <title>openssl</title>
+        <version>1.1.1</version>
+        <authors>The OpenSSL Project</authors>
+        <owners>GnatenkoV</owners>
+        <license type="expression">Apache-2.0</license>
+        <projectUrl>https://github.com/gnatenkov/openssl-clarity</projectUrl>
+        <icon>logo.png</icon>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <summary>OpenSSL. Compiler: VS 2019</summary>
+        <description>OpenSSL library, packaged for Visual Studio 2019 (vc142). Compiler: Visual Studio 2019</description>
+        <releaseNotes>OpenSSL 1.1.1-stable https://www.openssl.org/news/changelog.html</releaseNotes>
+        <copyright>Copyright 2019</copyright>
+        <tags>native,openssl,ssl,C,C++</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="package.targets"                   		target="build\native\openssl-clarity.targets" />
+
+        <file src="openssl\include\openssl\*.h" 			target="build\native\include\openssl\" />
+
+        <file src="build_openssl\libssl.lib"             	target="build\native\bin\libssl-1_1_1.lib" />
+        <file src="build_openssl\libcrypto.lib"          	target="build\native\bin\libcrypto-1_1_1.lib" />
+        <file src="build_openssl\libssl-1_1_1-x64.dll"     	target="build\native\bin\libssl-1_1_1.dll" />
+        <file src="build_openssl\libcrypto-1_1_1-x64.dll"  	target="build\native\bin\libcrypto-1_1_1.dll" />
+    </files>
+</package>
