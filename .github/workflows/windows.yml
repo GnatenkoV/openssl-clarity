@@ -20,6 +20,16 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.1
       
+    - name: Add MSVC to PATH
+    uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: win64
+        
+    - name: Add NASM to PATH
+    uses: ilammy/setup-nasm@v1
+      with:
+        platform: win64
+          
     - name: Add perl
       uses: shogo82148/actions-setup-perl@v1
       
