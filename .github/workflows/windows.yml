@@ -27,25 +27,22 @@ jobs:
       run: echo ARTIFACT_VERSION=$((Get-Date).tostring("yyyy.MMdd.HHmm")) >> $env:GITHUB_ENV
       
     - name: Create Build Dir
-      run: mkdir build
+      run: mkdir build_openssl
       
-    - name: Configure build
-      working-directory: build
+    - name: Configure build_openssl
+      working-directory: build_openssl
       run: |
         perl ..\openssl\Configure --banner=Configured no-makedepend no-shared no-fips VC-WIN64A
         perl configdata.pm --dump
 
     - name: Build Debug
-      working-directory: build
+      working-directory: build_openssl
       run: |
         nmake clear
         nmake
 
-    - name: Pack NuGet (Lib)
-      run: nuget pack shapedbyiris.windows-clarity-driver.lib.nuspec -p version=$env:ARTIFACT_VERSION
-      
     - name: Pack NuGet (Package)
-      run: nuget pack shapedbyiris.windows-clarity-driver.package-unsigned.nuspec -p version=$env:ARTIFACT_VERSION
+      run: nuget pack openssl-clarity.nuspec -p version=$env:ARTIFACT_VERSION
 
     - name: Publish NuGet
       if: github.event_name != 'pull_request'
