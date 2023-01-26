@@ -21,9 +21,9 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
       
     - name: Add MSVC to PATH
-    uses: ilammy/msvc-dev-cmd@v1
-      with:
-        arch: win64
+      uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: win64
         
     - name: Add NASM to PATH
       uses: ilammy/setup-nasm@v1
